@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css specificity</title>
+    <style>
+        .link{
+            display: block;
+            margin-top: 4px;
+            color: blue;
+        }
+
+        p{
+            background-color:#aaa;
+        }/* esse tem preferêmcia menor doque o proxímo */
+
+        .observacao {
+            background: #5f5;
+            border: dashed 5px;
+            padding: 200px!important;
+            font-size: 40px;
+        }
+
+        /* Esse tem mais preferência do que o de cima */
+        p.observacao{
+            padding: 2px;
+            background: linear-gradient(to right, red, yellow);
+        }
+    </style>
+
+</head>
+<body>
+    <p class="observacao">Olha essa observação!!!</p>
+    <p>
+        <h1>Mais informação</h1>
+        <a href="https://developer.mozilla.org/pt-BR/docs/web/CSS/specificity" target="_blank">Look more <strong>Mozilla</strong></a>
+
+        <a class="link" href="https://www.w3schools.com/css/css_specificity.asp" target="_blank">Read more <strong>w3schools</strong></a>
+    </p>
+</body>
+</html>

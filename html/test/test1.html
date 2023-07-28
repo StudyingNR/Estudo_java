@@ -1,0 +1,40 @@
+<h1>Projeto</h1>
+<ul class="tree">
+    <span wm-folder>Backend</span>
+        <ul>
+            <span wm-folder>app</span>
+                <ul>
+                    <li>produtos.js</li>
+                    <li>usuario.js</li>
+                    <li>vendas.js</li>
+                </ul>
+        </ul>
+        <ul>
+            <span wm-folder>Config</span>
+                <ul>
+                    <li>banco.js</li>
+                    <li>rotas.js</li>
+                    <li>servidor.js</li>
+                </ul>
+        </ul>
+    <span wm-folder>Frontend</span>
+        <ul>
+            <span wm-folder>public</span>
+                <ul>
+                    <li>app.css</li>
+                    <li>app.js</li>
+                    <li>index.html</li>
+                </ul>
+        </ul>
+</ul>
+
+<link rel="stylesheet" href="style.css">
+<script>
+    document.querySelectorAll('[wm-folder]').forEach(folder => {// pega All elementos personalizado
+        folder.onclick = function(e) {//função disparado com um click
+            const ul = folder.nextElementSibling // pega o elemento posterior da seletor personalizado
+            const d = ul.style.display //pega a visibilidade do o elemento
+            ul.style.display = d ==='none' ? 'block' : 'none' // mapea a animação do elemento
+        }
+    })
+</script>

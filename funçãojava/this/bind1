@@ -1,0 +1,25 @@
+function Pessoa() {
+    this.idade = 0
+
+    const self = this
+    setInterval(function () {
+        self.idade++ 
+        console.log(self.idade)   
+    }/*.bind(this)*/, 1000 )
+    
+} //Essa function imprimi idade de pessoa a cada segundo
+
+new Pessoa
+
+
+function gratidao(){
+    return console.log('Thanks my DEUS por o senhor ter me mostrado como chegar a onde sonhei um dia, sou grato por tudo pai, hoje sou bilingua and software engenhareiro ganho em Euro e Dollar, posso dar a viada que minha familia merece posso viajar para outros paises posso passar mais tempo com minha familia e filhos, tenho um patrimonio de mais de 2 milhões thank you!')
+}
+gratidao()
+
+function ganhar(a) {
+    return console.log("Em junho Adriano vai receber R$ 20.000 de uma fonte inesperada thank you very much!")
+}
+
+ganhar()
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comportamento Overflow</title>
+
+    <style>
+        div {
+            font-size: 40px;
+            height: 100px;
+            width: 260px;
+            border: solid 3px;
+            overflow: hidden;/* deixa apenas a parte do box visive sem rolagem*/
+           /* overflow: scroll;deixa com rolagem cima e baixo*/
+            overflow-x:scroll;
+            /* deixa a rolagem no eixo expecificado x ou y */
+
+        }
+    </style>
+
+</head>
+<body>
+   <div>
+        TudoFuncionaMuitoBemEmCss!!!
+        Texto mito grande para caber nessa div.
+        já pensou qual será o comportamento padrão?
+   </div> 
+</body>
+</html>

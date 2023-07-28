@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working Midia Quiry</title>
+
+    <style>
+        div {
+            font-size: 40px;
+            margin: 20px;
+            padding: 20px;
+            background-color: rgba(55, 14, 94, 0.922);
+            color: white;
+            text-transform: uppercase;
+            text-align: center;
+            border: solid 5px rgba(0, 55, 255, 0.581);
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .verySmall {
+                display: block;
+            }
+        }
+
+        @media (max-width: 1000px), (orientation: portrait){
+            .relativeSmall {
+                display: block;
+            }
+        }
+
+        @media (min-width: 500px) and (max-width: 1000px) {
+            .interval { display: block;}
+        }
+    </style>
+</head>
+<body>
+    <div class="verySmall">Very small</div>
+    <div class="relativeSmall">Relative or small</div>
+    <div class="interval">Interval</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Specificity2</title>
+
+    <style>
+        body {
+            font-size: 40px;
+        }
+
+        div {
+            background-color: #00b; 
+            color: white;
+        }
+
+        div.estilo{
+            background-color: green;
+        }
+        #unico1, #unico2{
+            background-color: #000;
+        }
+
+        div:hover, #unico1:hover {
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div id="unico" class="estilo" style="background-color: #D9E8a6;color:green;">
+        #unico1 vs .stilo vs iline
+    </div>
+    <div id="unico2" class="estilo">#unico2 vs .estilo</div>
+    <div class="estilo" wm-cor>.estilo vs wm-cor</div>
+    <div class="estilo">.estilo</div>
+    <div>elemento</div>
+    <p>
+        <h1>Calculadora de especificity</h1>
+        <a href="https://specificity.keegan.st">More about subject specificity </a> 
+    </p>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Grid2</title>
+    <style>
+        body {
+            margin: 20px;
+            height:400px;
+            background-color: beige;
+        }
+
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: solid 5px brown;
+            background:  rgb(235, 187, 90);
+        }
+        
+        body {
+            display:  grid;
+            grid-template-columns: [inicio] 1fr  
+            [metade1 meio1] 1fr 
+            [metade2 meio2] 1fr [fim];
+            grid-template-rows: repeat(3, 1fr);
+            column-gap: 20px;
+            row-gap: 10px;
+            grid-gap: 10px 10px;
+        }
+
+        .d1 {
+            grid-column-start: metade2;
+            grid-column-end: fim; 
+            grid-column: meio1 / fim;
+            grid-row: 1 /spam 2;
+
+            /* row-start column-start row-end column-end */
+            grid-area: 1 / meio1 / span 3 / fim;
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="d1">1</div>
+    <div class="d2">2</div>
+    <div class="d3">3</div>
+</body>
+</html>

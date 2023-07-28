@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomia CSS</title>
+    <style>
+        .selector {
+            color: #222;
+            font-size: 30px;
+            text-align:center;
+            border: solid 5px navy;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            width: calc(100% - 40px);/*Esta função faz o culculo da posição do elemento.*/
+            background-color:rgba(7, 7, 248, 0.844);
+            color:rgba(255, 255, 255, 0.814);
+            margin-top: 1px;
+        }
+        .selector:hover {
+            background-color:#03bbf3e6;
+            color:rgb(194, 229, 229);  
+        }
+        .selector::first-letter{
+            font-size:50px;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="selector">Conteúdo</div>
+    
+</body>
+</html>

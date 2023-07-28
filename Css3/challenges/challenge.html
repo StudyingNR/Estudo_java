@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+                /*#122A59 #42708C #33A6A6 #A3D9D9  
+                #010A26 */
+                
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        
+        body {
+            background-color: #42708C;
+            font-family: 'Oswald', sans-serif;
+            margin: 0;
+        }
+
+        .cabecalho {
+            background: #122A59;
+            border-bottom: solid 5px #A3D9D9; 
+        }
+
+        .logo {
+            display: inline-block;
+            height: 80px;
+            padding: 15px;
+        }
+
+        .logo img {
+            height: 100%;
+        }
+
+        .menuToggle{
+            float: right;
+            background: #42708C;
+            border: solid 1px  #A3D9D9;
+            border-radius: 5px;
+             height:40px;
+             padding:10px 20px;
+             margin: 20px 15px;
+        }
+        
+        .menu {
+            display: inline-block;
+            vertical-align: top;
+            height: 80px;
+            padding: 25px;
+        }
+
+        .menu ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            display: inline-block;
+        }
+        
+        .cabecalho a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            
+        }
+
+        .menu a{
+            padding: 15px;
+        }
+
+        .altenticacao {
+            float: right;
+            height: 80px;
+            padding: 25px;
+        }
+
+        .menu a:hover,
+        .menu a.selected {
+            background: #33A6A6;
+            color: #010A26;
+        }
+
+        .botao {
+            border-radius: 30px;
+            padding: 10px 25px;
+            margin: 10px;
+        }
+
+        .destaque {
+            background: #33A6A6;
+            color: #010A26;
+        }
+
+        @media (min-width: 710px) {
+            .menuToggle {
+                display: none;
+            }
+        }
+
+        @media(max-width: 960px) {
+            .altenticacao {
+                display: none;
+            }
+        }
+
+
+        @media(max-width: 710px) {
+            .menu {
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+            <a href="#inicio">
+                <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo">
+            </a>
+        </div>
+        <button class="menuToggle">
+            <i class="fa fa-lg fa-bars"></i>
+        </button>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="#inicio">Inicio</a>
+                </li>
+                <li>
+                    <a href="#course">Course</a>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <aside class="altenticacao">
+            <a href="#login">Login</a>
+            <a href="#registrar" class="botao destaque">Registrar</a>
+        </aside>
+    </header>
+
+    <script>
+        window.onhashchange = function(e) {
+            const oldURL = e.oldURL.split('#')[1] 
+            const newURL = e.newURL.split('#')[1]
+            const oldMenu = document.querySelector(`.menu a[href = '#${oldURL}']`)
+            const newMenu = document.querySelector(`.menu a[href = '#${newURL}']`)
+            oldMenu && oldMenu.classList.remove('selected')
+            newMenu && newMenu.classList.add('selected')
+        }
+    </script>
+</body>
+</html>

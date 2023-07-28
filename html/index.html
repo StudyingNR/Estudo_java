@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML module</title>
+    <style>
+        #contents {
+            padding: 30px 0px;
+     
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercise HTML</h1>
+    </header>
+    <nav>
+        <a href="test/test.html">00 - test</a>| 
+        <a href="test/test1.html">01 - test</a>|
+        <a href="test/test2.html">02 - test</a>|
+        <a href="test/links.html">03- links</a>|
+        <a href="test/form/form.html">04- Formulário</a>|
+        <a href="test/img.html">05- Imagens</a>|
+        <a href="test/video.html">06- Video</a>
+
+    </nav>
+    <section id="contents"></section>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+            const content = document.getElementById('contents')
+
+            link.onclick = function(e) {
+                e.preventDefault()
+                
+                fetch(link.href)
+                .then(resp => resp.text())
+                .then(html => contents.innerHTML = html)
+            }
+        })
+    </script>
+    <footer>
+        <h2>Modern Web Course</h2>
+    </footer>
+</body>
+</html>

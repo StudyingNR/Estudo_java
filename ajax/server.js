@@ -1,9 +1,7 @@
 const bodyParser = require('body-parser')
 const express = require('express')
 const multer = require('multer')
-const multer = require('multer')
 const app = express()
-const porta = 8080
 
 app.use(express.static('.'))
 app.use(bodyParser.urlencoded({ extended: true}))
@@ -20,4 +18,4 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage }).single('arquivo')
 
-app.listen(porta, () => console.log('OK'))
+app.listen(8080, () => console.log('OK'))
